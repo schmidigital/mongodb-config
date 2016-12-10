@@ -4,6 +4,8 @@ MAINTAINER Hussein Galal
 ADD ./*.sh /opt/rancher/bin/
 RUN chmod u+x /opt/rancher/bin/*.sh
 
+RUN apk add linux-headers
+
 # install dig and jq
 RUN apk add -U alpine-sdk \
     && curl ftp://ftp.isc.org/isc/bind9/9.10.2/bind-9.10.2.tar.gz|tar -xzv \
